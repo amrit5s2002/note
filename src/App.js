@@ -7,6 +7,7 @@ import {
 import Header  from "./components/Header";
 import './App.css';
 import NotesListPage from './pages/NotesListPage';
+import NotePage from "./pages/NotePage";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
     <div className="App">
       <Header />
     <Routes>
-    <Route path="/" exact component= {NotesListPage} />
+    <Route exact path="/" element={<NotesListPage />} />
+    <Route exact path="/note/:id" element={<NotePage />} />
     </Routes>
     </div>
     </Router>
